@@ -1,0 +1,2540 @@
+<!次回演奏会 楽曲選定参考資料 html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>次回演奏会 楽曲選定参考資料（改訂版）</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #1a237e; /* ネイビー */
+        --secondary-color: #42a5f5; /* スカイブルー */
+        --accent-color: #ffd700; /* ゴールド */
+        --highlight-bg: #fff9c4; /* 強調用背景色（薄い黄色） */
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+      }
+
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 40px 60px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      .subtitle {
+        text-align: center;
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .meta-info {
+        text-align: right;
+        font-size: 12px;
+        margin-bottom: 40px;
+        color: #666;
+      }
+
+      h2 {
+        font-size: 18px;
+        color: var(--primary-color);
+        border-left: 5px solid var(--secondary-color);
+        padding-left: 10px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        background-color: #f5f9ff;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      h3 {
+        font-size: 16px;
+        color: #0d47a1;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 15px;
+        color: #1565c0;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: 700;
+        border-bottom: 1px dashed #bbb;
+        padding-bottom: 3px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border-color);
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f0f4f8;
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      tr:nth-child(even) {
+        background-color: #fafafa;
+      }
+
+      /* 3シート共通曲の特別スタイル */
+      .special-box {
+        border: 2px solid var(--accent-color);
+        background-color: #fffde7;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+
+      .special-box table {
+        margin-bottom: 0;
+        background-color: white;
+      }
+
+      .special-box th {
+        background-color: var(--accent-color);
+        color: #333;
+      }
+
+      /* 強調行スタイル */
+      .highlight-row {
+        background-color: var(--highlight-bg) !important;
+        font-weight: 700;
+        border: 2px solid var(--secondary-color);
+      }
+
+      .highlight-row td {
+        color: #000;
+      }
+
+      /* バッジスタイル */
+      .badge-new {
+        display: inline-block;
+        background-color: #2e7d32;
+        color: white;
+        font-size: 10px;
+        padding: 1px 4px;
+        border-radius: 3px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+      .badge-common {
+        font-size: 11px;
+        color: #d84315;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+
+      .star-gold {
+        color: #fbc02d;
+      }
+
+      ul.genre-list {
+        padding-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      ul.genre-list li {
+        margin-bottom: 5px;
+      }
+
+      .summary-box {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 4px;
+        border-left: 4px solid #666;
+      }
+
+      /* Badge styles for sheet common */
+      .badge-3sheet {
+        display: inline-block;
+        background: linear-gradient(135deg, #ffd700, #ffb300);
+        color: #333;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 10px;
+        margin-left: 4px;
+        vertical-align: middle;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+      .badge-2sheet {
+        display: inline-block;
+        background: linear-gradient(135deg, #42a5f5, #1976d2);
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 10px;
+        margin-left: 4px;
+        vertical-align: middle;
+      }
+
+      /* Tab Navigation */
+      .tab-nav {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 0;
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 0;
+      }
+      .tab-btn {
+        background-color: #e8eaf6;
+        color: var(--primary-color);
+        border: 1px solid #c5cae9;
+        border-bottom: none;
+        padding: 8px 18px;
+        border-radius: 6px 6px 0 0;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: 'Noto Sans JP', sans-serif;
+        transition: background 0.2s;
+        line-height: 1.4;
+        text-align: center;
+      }
+      .tab-btn:hover {
+        background-color: #c5cae9;
+      }
+      .tab-btn.active {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+      }
+      .tab-content {
+        display: none;
+        border: 1px solid #c5cae9;
+        border-top: none;
+        padding: 20px;
+        background: #fff;
+        border-radius: 0 4px 4px 4px;
+      }
+      .tab-content.active {
+        display: block;
+      }
+
+      /* Song table */
+      .song-table {
+        font-size: 13px;
+      }
+      .song-table th {
+        background-color: #e8eaf6;
+        color: var(--primary-color);
+        font-weight: bold;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+      .song-table tr:hover {
+        background-color: #f0f4ff !important;
+      }
+
+      /* Genre tag */
+      .genre-tag {
+        display: inline-block;
+        background-color: #f3f4f6;
+        color: #555;
+        font-size: 11px;
+        padding: 2px 6px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        white-space: nowrap;
+      }
+
+      /* YouTube button */
+      .yt-btn {
+        display: inline-block;
+        background-color: #ff0000;
+        color: white !important;
+        text-decoration: none;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .yt-btn:hover {
+        background-color: #cc0000;
+      }
+
+      /* Teien grid */
+      .teien-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 8px;
+      }
+      .teien-item {
+        background: #f8f9ff;
+        border: 1px solid #e0e4f0;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 13px;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .teien-item .num {
+        color: #aaa;
+        font-size: 11px;
+        min-width: 20px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      /* Scroll for large tables */
+      .tab-content {
+        overflow-x: auto;
+      }
+    </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Open%20Sans:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Google%20Sans:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto%20Sans%20JP:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet"></head>
+  <body style="margin: 0px; padding-top: 40px;">
+    <h1>次回演奏会 楽曲選定参考資料（改訂版）</h1>
+    <div class="subtitle">〜3つのリクエスト一覧の共通傾向分析 〜</div>
+    <div class="meta-info">作成日：2026年3月</div>
+
+    <h2>★ 3シート共通曲（最重要！）</h2>
+    <div class="special-box">
+      <p style="margin-bottom: 10px; font-weight: bold; color: #1a237e">
+        全3シート（第二回定演、2027年度、2025年度）すべてに登場するリクエスト曲
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th width="30%">曲名</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="star-gold">★★★★★</span> <strong>宝島</strong></td>
+            <td>吹奏楽の超定番。全シートに登場する最多リクエスト曲。フィナーレに最適。</td>
+          </tr>
+          <tr>
+            <td><span class="star-gold">★★★★★</span> <strong>　　Mr.インクレディブル</strong></td>
+            <td>映画音楽の人気曲。全3シートに登場。ノリが良く、幅広い層に支持される。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>★ 2シート共通曲（更新版：16曲）</h2>
+    <p style="font-size: 13px; margin-bottom: 10px">少なくとも2つのシートにまたがってリクエストされた楽曲群です。</p>
+    <table>
+      <tbody>
+        <tr>
+          <th width="35%">曲名</th>
+          <th width="35%">登場シート</th>
+          <th width="30%">ジャンル</th>
+        </tr>
+        <tr>
+          <td>スターウォーズ（のテーマ）</td>
+          <td>第二回定演 ✓、2027年度 ✓</td>
+          <td>映画音楽</td>
+        </tr>
+        <tr>
+          <td><span style="display: inline !important">梁塵秘抄 〜熊野古道の幻想〜</span></td>
+          <td><span style="display: inline !important">第二回定演 ✓、2027年度 ✓</span></td>
+          <td><span style="display: inline !important">吹奏楽オリジナル（和風）</span></td>
+        </tr>
+        <tr>
+          <td>アルヴァマー序曲</td>
+          <td>第二回定演 ✓、2025年度 ✓</td>
+          <td>クラシック/吹奏楽</td>
+        </tr>
+        <tr>
+          <td>ディスコキッド</td>
+          <td>第二回定演 ✓、2025年度 ✓</td>
+          <td>ポップス</td>
+        </tr>
+        <tr>
+          <td>レ・ミゼラブル</td>
+          <td>第二回定演 ✓、2025年度 ✓</td>
+          <td>ミュージカル/映画</td>
+        </tr>
+        <tr>
+          <td>吹奏楽のための「おとぎの森」</td>
+          <td>第二回定演 ✓、2027年度 ✓</td>
+          <td>吹奏楽オリジナル</td>
+        </tr>
+        <tr>
+          <td>オーメンズ・オブ・ラブ</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>吹奏楽定番ポップス</td>
+        </tr>
+        <tr>
+          <td>オリエント急行</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>吹奏楽オリジナル</td>
+        </tr>
+        <tr>
+          <td>さくらのうた</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>吹奏楽オリジナル</td>
+        </tr>
+        <tr>
+          <td>ネバーランドの冒険物語</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>吹奏楽オリジナル</td>
+        </tr>
+        <tr>
+          <td>リバーダンス</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>吹奏楽定番</td>
+        </tr>
+        <tr>
+          <td>もののけ姫（セレクション）</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>ジブリ/映画音楽</td>
+        </tr>
+        <tr>
+          <td>アナザー・デイ・オブ・サン</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>映画音楽(ラ・ラ・ランド)</td>
+        </tr>
+        <tr>
+          <td>星条旗よ永遠なれ</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>マーチ</td>
+        </tr>
+        <tr>
+          <td>海の男達の歌</td>
+          <td>2027年度 ✓、2025年度 ✓</td>
+          <td>吹奏楽</td>
+        </tr>
+        <tr>
+          <td>嵐関連（A・RA・SHI 等）</td>
+          <td>第二回定演 ✓、2027年度 ✓</td>
+          <td>J-POP</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>★ ジャンル別リクエスト傾向</h2>
+
+    <h3>1位：映画・アニメ音楽（圧倒的多数）</h3>
+    <ul class="genre-list">
+      <li>
+        <strong>ジブリ系（3シート全て登場）：</strong>2025年度だけで7件のリクエスト（シネマトリロジー、メドレー、千と千尋、ポニョ、魔女宅など）。最も需要が高い。
+      </li>
+      <li>
+        <strong>ディズニー系（3シート全て登場）：</strong>ディズニーランド50周年、ヴィランズ、プリンセス、フレンドライクミーなど多様な切り口で人気。
+      </li>
+      <li>
+        <strong>その他大作映画：</strong>スターウォーズ、ハリーポッター、パイレーツ、シンドラーのリスト、007、ラ・ラ・ランドなど。
+      </li>
+    </ul>
+
+    <h3>2位：吹奏楽定番曲</h3>
+    <ul class="genre-list">
+      <li><strong>3シート共通：</strong>宝島</li>
+      <li><strong>2シート共通：</strong>オーメンズ・オブ・ラブ、アルヴァマー序曲、ディスコキッド、リバーダンス</li>
+      <li>
+        <strong>その他：</strong>マードックからの最後の手紙、ネバーランドの冒険物語、海の男たちの歌など、演奏効果の高い曲が好まれる。
+      </li>
+    </ul>
+
+    <h3>3位：J-POP・ポップス</h3>
+    <ul class="genre-list">
+      <li><strong>国民的アーティスト：</strong>嵐（2シート共通）、サザンオールスターズ系</li>
+      <li>
+        <strong>現代J-POP（第二回定演）：</strong>Official髭男dism、Vaundy、ミセス・グリーン・アップル、サカナクション、星野源。一般層への訴求力が高い。
+      </li>
+    </ul>
+
+    <h3>4位〜6位</h3>
+    <ul class="genre-list">
+      <li>
+        <strong>アニメ・ゲーム：</strong>ルパン三世、スーパーマリオ、アンダーテール、鬼滅の刃等。熱心なファン層が存在。
+      </li>
+      <li><strong>ジャズ：</strong>「アメリカの古いジャズ」等の指定あり。スペイン、We Are Confidence Manなど。</li>
+      <li><strong>和風・クラシック：</strong>梁塵秘抄、さくらのうた、斐伊川など、日本的情緒を感じる楽曲への支持。</li></ul>
+
+    
+
+    
+
+    <h2>★ 選定推奨ランキング</h2>
+    <div class="summary-box">
+      <p><strong><span style="color: rgb(225, 83, 76);">&nbsp;最優先（3シート共通）</span></strong></p><p><span style="font-size: var(--font-size);">宝島 / Mr.インクレディブル</span></p>
+
+      <p><strong><span style="color: rgb(242, 168, 95);">強くおすすめ（2シート共通）</span></strong></p><p><span style="color: rgb(0, 0, 0);">梁塵秘抄 / オーメンズ・オブ・ラブ / リバーダンス / もののけ姫 </span><font color="#fbc02d"><span style="caret-color: rgb(251, 192, 45); color: rgb(0, 0, 0);">/</span></font><span style="color: rgb(0, 0, 0);">スターウォーズ / アルヴァマー序曲 / ディスコキッド / レ・ミゼラブル </span><font color="#fbc02d"><span style="caret-color: rgb(251, 192, 45); color: rgb(0, 0, 0);">/</span></font><span style="color: rgb(0, 0, 0);">&nbsp;海の男達の歌 / ネバーランドの冒険物語 / さくらのうた
+      </span></p>
+
+      <p><strong><span style="color: rgb(121, 199, 130);">&nbsp;ジャンル・テーマ次第で有効</span></strong></p><p>ジブリ系メドレー / ディズニー系メドレー/<span style="font-size: var(--font-size);">&nbsp;嵐 / J-POP系 / ジャズ系</span></p>
+    </div>
+
+    <h2>★ まとめ・ポイント</h2>
+    <ul>
+      <li><strong>最優先事項：</strong>「宝島」と「Mr.インクレディブル」は全リクエスト一致。核とすべき曲</li>
+      <li>
+        <strong>ジャンル構成：</strong>ジブリ・ディズニーは必須級。映画音楽を軸にしつつ、吹奏楽定番（オーメンズ、アルヴァマー等）で固めることを検討。</li>
+      <li>
+        <strong>新規性：</strong>現代J-POP（髭男、Vaundy等）やジャズ（シング・シング・シング）を入れることで、リクエストの傾向を満たしつつ新鮮さを出せる。
+      </li>
+      <li><strong>地域性：</strong>「海の男達の歌」「宝島」などで大磯・湘南らしさを演出可能。</li>
+    </ul>
+
+    <h2 id="sheet-list">★ シート別リクエスト曲一覧（全曲）</h2>
+    <p style="font-size: 13px; margin-bottom: 10px">
+      各シートに登録されているすべてのリクエスト曲を一覧表示しています。<span class="badge-3sheet">🏆3シート共通</span>
+      <span class="badge-2sheet">★2シート共通</span> のバッジは前のセクションで分析済みの曲を示します。
+    </p>
+
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+      <button class="tab-btn" onclick="showTab('tab2027')">2027年度団内<br>（44曲）</button>
+      <button class="tab-btn" onclick="showTab('tabTeien')">第二回定演<br>（46曲）</button>
+      <button class="tab-btn active" onclick="showTab('tab2025')">2025年度団内<br>（69曲）</button>
+    </div>
+
+    <!-- 2027年度団内リクエスト -->
+    <div id="tab2027" class="tab-content" style="font-size: 18px; text-align: center;">
+      <h3>📋 2027年度団内リクエスト（全44曲）</h3>
+      <table class="song-table"><tbody><tr><th width="4%">No.</th><th width="20%">曲名</th><th width="24%">出版社</th><th width="10%">動画</th><th width="12%">楽譜</span>&nbsp;</th><th width="48%">コメント</th></tr><tr><td style="text-align: center; color: #888">1</td><td><strong>落夏流穂</strong></td><td><a href="https://cafua.shop/?pid=185834962" target="_blank">リンク</a></td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/5OetrehNGXI?si=N32n8SD97cVVEfOu" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+<br></td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ゲーム音楽的な要素を持つ吹奏楽作品。テンポ変化が多く技術的にチャレンジングだが、練習を重ねることで高い演奏効果が期待できる。
+            </td></tr><tr><td style="text-align: center; color: #888">2</td><td><strong>「オン・ザ・タウン」より 3つのダンス・エピソード</strong></td><td>ブージー・アンド・ホーク</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=ZUFhwQiETrw&amp;list=LL&amp;index=47&amp;pp=iAQBsAgC" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(252, 6, 6); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+<br></td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              3つの楽章からなる楽曲。ピアノや打楽器（4人編成）が含まれ、現在のバンド編成に適している。
+            </td></tr><tr><td style="text-align: center; color: #888">3</td><td><strong>J−BEST エロティカ・セブン〜勝手にシンドバッド</strong></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">　　&nbsp;<meta charset="UTF-8"><a href="https://youtu.be/A35ZPdq4w3g?si=w2jGkps4E1Mfqr3V+" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              大磯・湘南地域にゆかりの深いサザンオールスターズのメドレー。地域イベントや定期演奏会において、全世代に訴求できるプログラムとして推奨。
+            </td></tr><tr><td style="text-align: center; color: #888">4</td><td><strong>Miracle Shot</strong></td><td>ニュー・サウンズ・イン・ブラス</td><td>　　<a href="https://youtu.be/S6JfMlanlvI?si=XspzAbWfwSQQXEo9" target="_blank" class="yt-btn" style="background-color: rgb(255, 0, 0); transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); text-align: center;">▶</a><span style="font-size: var(--font-size); text-align: center; background-color: rgb(240, 244, 255);">&nbsp;　</span><br>
+
+  <meta charset="UTF-8">
+
+
+  </td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              報道番組のテーマ曲としても知られる楽曲。各パート（Tb, Sax, Tp, Fl,
+              Dr）にソロがあり、バンドの技術力をアピールできる。
+            </td></tr><tr><td style="text-align: center; color: #888">5</td><td><strong>Mr. インクレディブル</strong> <span class="badge-3sheet">🏆3シート共通</span></td><td>ニューサウンズ</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/HOHM1NmEHOE?si=d091nBzlfo2ZxYhA" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              3シート全てでリクエストされている人気曲。スパイ映画風の音楽で演奏会を盛り上げる。
+            </td></tr><tr><td style="text-align: center; color: #888">6</td><td><strong>Paradise Has No Border</strong></td><td>ロケットミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/DhjGJ825E2o?si=81ck-m8eX79by-1n" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888">⭕️</td><td style="color: rgb(85, 85, 85);">
+              東京スカパラダイスオーケストラの代表曲。ソロパートの変更など柔軟なアレンジが可能。
+            </td></tr><tr><td style="text-align: center; color: #888">7</td><td><strong>Ride</strong></td><td>Ride ／ Samuel R. Hazo</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/au4geHy_S_0?si=kD1s7TA3sF4Mwwsy" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 6, 6); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a></td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">疾走感のある楽曲で、オープニング曲として非常に効果的。</td></tr><tr><td style="text-align: center; color: #888">8</td><td><strong>Soranji</strong></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/rTPRdcRUomQ?si=-K-KOEfL88D11Hlg" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">Mrs. GREEN APPLEの楽曲。ウィンズスコア版のアレンジを推奨。</td></tr><tr><td style="text-align: center; color: #888">9</td><td><strong>THE PHANTOM OF THE OPERA</strong></td><td>
+              <a href="https://www.bandmusicshop.it/the-phantom-of-the-opera-dhp%201064037--010" target="_blank">リンク</a>
+            </td><td>
+              <a href="https://www.bandmusicshop.it/the-phantom-of-the-opera-dhp%201064037--010" target="_blank"><meta charset="UTF-8"></a>　　<a href="https://youtu.be/DWoui_dF5K4?si=RA1tZD9KsQO4stg4" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a>
+
+
+            </td><td style="text-align: center; color: #888">🔺</td><td style="color: rgb(85, 85, 85);">
+              「オペラ座の怪人」のアレンジ版。原曲キーで書かれており雰囲気が良い。ミュージカル特集（ライオンキング、レミゼ等）の一曲として提案。
+            </td></tr><tr><td style="text-align: center; color: #888">10</td><td><strong>We Are Confidence Man</strong></td><td>ウィンズスコア</td><td>　　<a href="https://m.youtube.com/watch?v=prWZgvhherM&amp;time_continue=1&amp;source_ve_path=NzY3NTg&amp;embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ドラマ「コンフィデンスマンJP」のテーマ曲。ジャズテイストでおしゃれな雰囲気を演出できる。
+            </td></tr><tr><td style="text-align: center; color: #888">11</td><td><strong>アナザー・デイ・オブ・サン</strong> <span class="badge-2sheet">★2シート共通</span></td><td>Winds Score</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/6_zNfNwg2NI?si=hGgkuBlv7I7TqVbC" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              映画「ラ・ラ・ランド」のオープニング曲。軽快なリズムでコンサートの盛り上げ役に適している。
+            </td></tr><tr><td style="text-align: center; color: #888">12</td><td><strong>アラベスク</strong></td><td>ハル・レナード</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/1hlnMdyyEHw?si=IXvXlDKrmzdXchLB" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              サミュエル・ヘイゾ作曲。中東風のエキゾチックな旋律とリズムが特徴的な楽曲。
+            </td></tr><tr><td style="text-align: center; color: #888">13</td><td><strong>オーメンズ・オブ・ラブ</strong> <span class="badge-2sheet">★2シート共通</span></td><td>ウィンズスコア、ブレーン 他</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/XVbcdgBiHXE?si=8QBEKLSAynk9kam1" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(136, 136, 136);
+      color: rgb(136, 136, 136);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="color: rgb(85, 85, 85);">吹奏楽の定番ポップスとして人気が高い。</td></tr><tr><td style="text-align: center; color: #888">14</td><td><strong>おジャ魔女カーニバル!!</strong></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=Vi2tHjjQ3lw&amp;time_continue=8&amp;source_ve_path=NzY3NTg&amp;embeds_referring_euri=https%3A%2F%2Fwinds-score.com%2F" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              懐かしのアニメソング。明るく元気な曲調で、観客を楽しませることができる。
+            </td></tr><tr><td style="text-align: center; color: #888">15</td><td><strong>オリエント急行</strong> <span class="badge-2sheet">★2シート共通</span></td><td>Studio Music</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/THRdGhiVvfw?si=ckxdVSPeCRpVywls" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              「旅」や「冒険」をテーマにしたステージ構成に適している。列車の旅を描写したドラマティックな作品。
+            </td></tr><tr><td style="text-align: center; color: #888">16</td><td><strong>お酒ソング・コレクション～酔奏楽の為の～</strong></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=rSy1bWvqfac" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">お酒にまつわる楽曲のメドレー。幅広い世代が盛り上がれる選曲。</td></tr><tr><td style="text-align: center; color: #888">17</td><td><strong>カーニバルのマーチ</strong></td><td>不明(課題曲)</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=CxYMZg7nHTg&amp;list=PL46A23B76CB97F19C&amp;index=75&amp;pp=iAQB8AUB" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">2011年の課題曲。明るく祝祭的な雰囲気を持つマーチ。</td></tr><tr><td style="text-align: center; color: #888">18</td><td><strong>さくらのうた</strong> <span class="badge-2sheet">★2シート共通</span></td><td>ブレーン、ウィンズスコア 他</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/ffTpPq5tL24?si=4OHoSzSLAurdpbgm" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">2012年の課題曲。日本的な情緒と美しさを持つ名曲で、人気が高い。</td></tr><tr><td style="text-align: center; color: #888">19</td><td>
+              <strong>ジャパニーズグラフィティXIV A・RA・SHI～Beautiful Days</strong>
+              <span class="badge-2sheet">★2シート共通</span>
+            </td><td>ヤマハミュージックエンタテインメントホールディングス</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/6Q3beUjrvSo?si=ErNixlfXnGWydG5O" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              嵐のヒット曲メドレー。国民的アイドルグループの楽曲で、幅広い層にアピールできる。
+            </td></tr><tr><td style="text-align: center; color: #888">20</td><td><strong>スターウォーズ</strong> <span class="badge-2sheet">★2シート共通</span></td><td>不明</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=-4rvpDrtvto" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              映画音楽の金字塔。壮大なサウンドで演奏会のメインプログラムになり得る。
+            </td></tr><tr><td style="text-align: center; color: #888">21</td><td><strong>スタジオジブリ・アニメ・メドレー</strong></td><td>フォスターミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/5POmjyduvjc?si=-ldF54wicAI_gILU" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 3, 3); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ジブリ作品の人気曲を集めたメドレー。ファミリー層向けのプログラムとして最適。
+            </td></tr><tr><td style="text-align: center; color: #888">22</td><td><strong>センチュリア</strong></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=ECGzu-nEJR4&amp;time_continue=36&amp;source_ve_path=NzY3NTg&amp;embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 4, 4); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              スウェアリンジェン作曲の定番曲。親しみやすいメロディと構成で、演奏会に適している。
+            </td></tr><tr><td style="text-align: center; color: #888">23</td><td><strong>そよ風のマーチ</strong></td><td>ネクサス音楽出版</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=oz5-I4Yq4N8&amp;source_ve_path=OTY3MTQ&amp;embeds_referring_euri=https%3A%2F%2Fwww.google.com%2F" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;　</span></span></td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">1991年の課題曲。爽やかな曲調のコンサートマーチ。</td></tr><tr><td style="text-align: center; color: #888">24</td><td><strong>ディズニーメドレー</strong></td><td>不明</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=YMdO2b2SKI4" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ディズニーの名曲を集めたメドレー。知名度が高く、会場の一体感を作りやすい。
+            </td></tr><tr><td style="text-align: center; color: #888">25</td><td><strong>ディズニーランド50周年セレブレーション</strong></td><td>ロケットミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/uAhDMfRj-KU?si=gYm6vCfZ4DNJ8Z9R" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ディズニーランドのパレードやアトラクション曲を含む祝祭的なメドレー。
+            </td></tr><tr><td style="text-align: center; color: #888">26</td><td><strong>トゥーランドット</strong></td><td>ブレーンミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/_yj0qjEn9Fw?si=pw6kOjYCrVuXtZQY" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              プッチーニのオペラ作品。ドラマティックで感動的なクライマックスを持つ。
+            </td></tr><tr><td style="text-align: center; color: #888">27</td><td><strong>ネバーランドの冒険物語</strong> <span class="badge-2sheet">★2シート共通</span></td><td>ブレーン</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/l6dfwdz-PV4?si=f5KIRN4YuBidC2hB" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 5, 5); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;"><span style="color: rgb(255, 255, 255); background-color: rgb(252, 4, 4);">▶</span></a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              比較的演奏しやすく、ストーリー性のある楽曲。ホルンの活躍など聴かせどころが多い。
+            </td></tr><tr><td style="text-align: center; color: #888">28</td><td><strong>ハッスル</strong></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/mz5ESAG4Zzc?si=iJASnt-6hwUNO5no" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(239, 11, 29); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ディスコ世代に馴染み深い楽曲。高齢者施設等での演奏にも適している。
+            </td></tr><tr><td style="text-align: center; color: #888">29</td><td><strong>ファンタスマゴリア</strong></td><td>
+              <a href="https://www.brain-shop.net/shop/g/gYDOA-C09/?ytb=byccap" target="_blank">リンク</a>
+            </td><td>
+              <a href="https://www.brain-shop.net/shop/g/gYDOA-C09/?ytb=byccap" target="_blank"><meta charset="UTF-8"></a>　　<a href="https://youtu.be/GFaFhfeYSZs?si=zFUlAdizEXS66p9X" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+
+            </td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              阿部勇一作曲。急-緩-急の3部構成で、神秘的な中間部が特徴的。各パートに聴かせどころがある意欲作。
+            </td></tr><tr><td style="text-align: center; color: #888">30</td><td><strong>マーチ「潮煙」</strong></td><td>不明(課題曲)</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=n_--4Iq66co&amp;list=PL46A23B76CB97F19C&amp;index=94&amp;pp=iAQB8AUB" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">1993年の課題曲。日本的な旋律を持つ、特徴のあるマーチ。</td></tr><tr><td style="text-align: center; color: #888">31</td><td><strong>マゼランの未知なる大陸への挑戦</strong></td><td>CAFUAレコード</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/zIFXZyCnkhM?si=OqIkCq3ni0dCZLv_" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              樽屋雅徳作曲。金管楽器の活躍が多く、演奏者も聴衆も楽しめるエネルギッシュな作品。
+            </td></tr><tr><td style="text-align: center; color: #888">32</td><td><strong>もののけ姫</strong> <span class="badge-2sheet">★2シート共通</span></td><td>brain shop</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/gE7gskctmxg?si=GR9p8nZI-p5eOv3_" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(136, 136, 136);
+      color: rgb(136, 136, 136);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="color: rgb(85, 85, 85);">
+              ジブリ音楽の代表作。リベンジを望む声あり。</td></tr><tr><td style="text-align: center; color: #888">33</td><td><strong>ラメセスⅡ世</strong></td><td>不明</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/P9rx4F_nO0k?si=5_9F5NHYv8OfICur" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>　　<br></td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              阿部勇一作曲。エジプトを題材とした曲で、ホルンやトランペットなど金管パートの活躍が際立つ。
+            </td></tr><tr><td style="text-align: center; color: #888">34</td><td><strong>リバーダンス</strong> <span class="badge-2sheet">★2シート共通</span></td><td>ブレーンミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/vZ-GawRJLjE?si=WwWiNVUgSzj_oeBY" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(247, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              アイリッシュダンスの音楽。リズムが特徴的で演奏効果が高く、再演の要望も多い。
+            </td></tr><tr><td style="text-align: center; color: #888">35</td><td><strong>歌劇「サムソンとデリラ」より バッカナール</strong></td><td>不明</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/9BjmLtoK-JE?si=lpA9udFG2Jd6dJpl" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              サン＝サーンスの代表作。技術的な難易度は高いが、挑戦しがいのあるクラシック編曲作品。
+            </td></tr><tr><td style="text-align: center; color: #888">36</td><td><strong>海の男達の歌（船乗りと海の歌）</strong> <span class="badge-2sheet">★2シート共通</span></td><td>ブレーンオンラインショップで輸入可能</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/-vqUMkHuIec?si=0w3oiiPMN3RQRzIn" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              海の歌を題材としたR.W.スミスの作品。大磯という海辺の地域性を活かした選曲として適している。
+            </td></tr><tr><td style="text-align: center; color: #888">37</td><td><strong>君の瞳に恋してる</strong></td><td>ウィンズスコア、ミュージックエイト</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/G-pB2ADPKjM?si=LZyY0g9P1qaMi6Yr" target="_blank" class="yt-btn" style="
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      --text-decoration: none;
+      --color: var(--primary);
+      --background-color: transparent;
+      outline: 0px;
+      background-color: rgb(255, 0, 0);
+      color: white !important;
+      text-decoration: none;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition);
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-style: normal;
+      font-variant-caps: normal;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+    ">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">1960年代の名曲。幅広い世代に親しまれているポップスの定番。</td></tr><tr><td style="text-align: center; color: #888">38</td><td><strong>吹奏楽のための「おとぎの森」</strong> <span class="badge-2sheet">★2シート共通</span></td><td>フォスターミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/bCBlDIX9wSY?si=A1y4Ac8SJKbt6P9N" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 1, 1); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              メルヘンチックな世界観を持つ楽曲。物語性があり、コンサートのプログラムとして魅力的。
+            </td></tr><tr><td style="text-align: center; color: #888">39</td><td><strong>星条旗よ永遠なれ</strong> <span class="badge-2sheet">★2シート共通</span></td><td>ウィンズスコア</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=pHbgtUahL4s" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a><span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    "><span class="Apple-converted-space">&nbsp;</span></span>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              スーザの代表的マーチ。ピッコロのソロなど聴かせどころがあり、アンコール曲としても定番。
+            </td></tr><tr><td style="text-align: center; color: #888">40</td><td><strong>斐伊川に流るるクシナダ姫の涙</strong></td><td>フォスターミュージック</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://youtu.be/JDSW410Pq7g?si=TRpTasqdUTMAY0iJ" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              樽屋雅徳作曲。日本神話を題材とした人気曲。ドラマティックな展開が魅力。
+            </td></tr><tr><td style="text-align: center; color: #888">41</td><td><strong>宝島</strong> <span class="badge-3sheet">🏆3シート共通</span></td><td>不明</td><td><br></td><td style="text-align: center; color: #888">⭕️</td><td style="color: rgb(85, 85, 85);">
+              T-SQUAREの名曲。吹奏楽ポップスの大定番であり、会場を盛り上げる鉄板曲。
+            </td></tr><tr><td style="text-align: center; color: #888">42</td><td><strong>僕らのインベンション</strong></td><td>不明　(課題曲)</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=IB8Sq0wNaqA&amp;list=RDIB8Sq0wNaqA&amp;start_radio=1&amp;pp=ygUe5YOV44KJ44Gu44Kk44Oz44OZ44Oz44K344On44OzoAcB" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 5, 5); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">2005年の課題曲。バッハのインベンションをモチーフとした楽曲。</td></tr><tr><td style="text-align: center; color: #888">43</td><td><strong>夕暮れの静寂の中で</strong></td><td>ボルフガング・ショット社</td><td>
+
+  <meta charset="UTF-8">
+
+
+  　　<a href="https://m.youtube.com/watch?v=q1E2CugeEWw&amp;list=RDq1E2CugeEWw&amp;start_radio=1&amp;pp=ygUb5aSV5pmu44KM44Gu6Z2Z5a-C44Gu5Lit44GnoAcB" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(253, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+</td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              ピアノとチャイム編成あり。静謐で美しい雰囲気を持つ楽曲。特殊楽器の調達が必要。
+            </td></tr><tr><td style="text-align: center; color: #888">44</td><td><strong>梁塵秘抄〜熊野古道の幻想〜</strong> <span class="badge-2sheet">★2シート共通</span></td><td>
+              <a href="https://www.fostermusic.jp/products/detail/11" target="_blank">リンク</a>
+            </td><td>
+              <a href="https://www.fostermusic.jp/products/detail/11" target="_blank"><meta charset="UTF-8"></a>　　<a href="https://youtu.be/PsEMWEdVPbs?si=9jEYPZegmFMDtdmO" target="_blank" class="yt-btn" style="box-sizing: border-box; background-repeat: no-repeat; --text-decoration: underline; --color: var(--primary-hover); --background-color: transparent; outline: 0px; background-color: rgb(255, 0, 0); text-decoration: none; transition: background-color var(--transition),
+        color var(--transition),
+        text-decoration var(--transition),
+        box-shadow var(--transition),
+        -webkit-text-decoration var(--transition); display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; font-family: &quot;Noto Sans JP&quot;, sans-serif; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: white !important;">▶</a>
+
+
+            </td><td style="text-align: center; color: #888"><br></td><td style="color: rgb(85, 85, 85);">
+              福島弘和作曲。平安時代の和歌集を題材にした和風吹奏楽の名曲。全パートに聴かせどころがあり、演奏効果が高い。
+            </td></tr></tbody></table>
+    </div>
+
+    <!-- 第二回定演リクエスト -->
+    <div id="tabTeien" class="tab-content">
+      <h3>📋 第二回定演リクエスト（全46曲）</h3>
+      <p style="font-size: 12px; color: #666; margin-bottom: 10px">※このシートは曲名のみの簡易リストです。</p>
+      <div class="teien-grid">
+        <div class="teien-item"><span class="num">1</span> <strong>ひまわり</strong></div>
+        <div class="teien-item"><span class="num">2</span> <strong>イマジン</strong></div>
+        <div class="teien-item"><span class="num">3</span> <strong>映画音楽</strong></div>
+        <div class="teien-item"><span class="num">4</span> <strong>南米の曲</strong></div>
+        <div class="teien-item"><span class="num">5</span> <strong>映画名曲集</strong></div>
+        <div class="teien-item">
+          <span class="num">6</span> <strong>吹奏楽のための「おとぎの森」</strong>
+          <span class="badge-2sheet">★2シート共通</span>
+        </div>
+        <div class="teien-item">
+          <span class="num">7</span> <strong>アルヴァマー序曲</strong> <span class="badge-2sheet">★2シート共通</span>
+        </div>
+        <div class="teien-item">
+          <span class="num">8</span> <strong>ディスコキッド</strong> <span class="badge-2sheet">★2シート共通</span>
+        </div>
+        <div class="teien-item"><span class="num">9</span> <strong>シンクロ</strong></div>
+        <div class="teien-item"><span class="num">10</span> <strong>春風の通り道</strong></div>
+        <div class="teien-item">
+          <span class="num">11</span> <strong>スターウォーズのテーマ</strong> <span class="badge-2sheet">★2シート共通</span>
+        </div>
+        <div class="teien-item"><span class="num">12</span> <strong>サウスポー</strong></div>
+        <div class="teien-item"><span class="num">13</span> <strong>ファンティリュージョン</strong></div>
+        <div class="teien-item"><span class="num">14</span> <strong>交響詩ウルトラセブン1楽章</strong></div>
+        <div class="teien-item"><span class="num">15</span> <strong>ルパン三世</strong></div>
+        <div class="teien-item"><span class="num">16</span> <strong>くるみ割り人形(チャイコフスキー)</strong></div>
+        <div class="teien-item"><span class="num">17</span> <strong>アメリカの古いジャズ</strong></div>
+        <div class="teien-item"><span class="num">18</span> <strong>ハリーポッター</strong></div>
+        <div class="teien-item"><span class="num">19</span> <strong>シンドラーのリスト</strong></div>
+        <div class="teien-item"><span class="num">20</span> <strong>ジョンウィリアムズの曲</strong></div>
+        <div class="teien-item"><span class="num">21</span> <strong>フレンドライクミー</strong></div>
+        <div class="teien-item"><span class="num">22</span> <strong>海の見える街</strong></div>
+        <div class="teien-item"><span class="num">23</span> <strong>ミセスの曲</strong></div>
+        <div class="teien-item"><span class="num">24</span> <strong>パガニーニ</strong></div>
+        <div class="teien-item">
+          <span class="num">25</span> <strong>宝島</strong> <span class="badge-3sheet">🏆3シート共通</span>
+        </div>
+        <div class="teien-item">
+          <span class="num">26</span> <strong>嵐</strong> <span class="badge-2sheet">★2シート共通</span>
+        </div>
+        <div class="teien-item">
+          <span class="num">27</span> <strong>Mr.インクレディブル</strong> <span class="badge-3sheet">🏆3シート共通</span>
+        </div>
+        <div class="teien-item"><span class="num">28</span> <strong>パイレーツ</strong></div>
+        <div class="teien-item"><span class="num">29</span> <strong>野球応援メドレー</strong></div>
+        <div class="teien-item"><span class="num">30</span> <strong>オペラ「アイーダ」凱旋行進曲</strong></div>
+        <div class="teien-item"><span class="num">31</span> <strong>rubber duck race</strong></div>
+        <div class="teien-item"><span class="num">32</span> <strong>熊野古道</strong></div>
+        <div class="teien-item"><span class="num">33</span> <strong>アンダーテールの曲</strong></div>
+        <div class="teien-item"><span class="num">34</span> <strong>Vaundy</strong></div>
+        <div class="teien-item"><span class="num">35</span> <strong>サカナクション</strong></div>
+        <div class="teien-item"><span class="num">36</span> <strong>星野源</strong></div>
+        <div class="teien-item"><span class="num">37</span> <strong>髭男</strong></div>
+        <div class="teien-item"><span class="num">38</span> <strong>真島先生の曲</strong></div>
+        <div class="teien-item"><span class="num">39</span> <strong>illumination</strong></div>
+        <div class="teien-item"><span class="num">40</span> <strong>&amp;TEAM</strong></div>
+        <div class="teien-item"><span class="num">41</span> <strong>魔女宅メドレー</strong></div>
+        <div class="teien-item"><span class="num">42</span> <strong>[007]のテーマ</strong></div>
+        <div class="teien-item">
+          <span class="num">43</span> <strong>レミゼラブル</strong> <span class="badge-2sheet">★2シート共通</span>
+        </div>
+        <div class="teien-item"><span class="num">44</span> <strong>リズム感のあるジャズ</strong></div>
+        <div class="teien-item"><span class="num">45</span> <strong>アニメ(リクエストジャンル その他より)</strong></div>
+        <div class="teien-item"><span class="num">46</span> <strong>ゲーム(リクエストジャンル その他より)</strong></div>
+      </div>
+    </div>
+
+    <!-- 2025年度団内リクエスト -->
+    <div id="tab2025" class="tab-content active">
+      <h3>📋 2025年度団内リクエスト（全69曲）</h3>
+      <table class="song-table"><thead><tr><th width="4%">No.</th><th width="30%">曲名</th><th width="22%">出版社</th><th width="18%">楽譜</th><th width="18%">動画</th></tr></thead><tbody><tr><td style="text-align: center; color: #888">1</td><td><strong>「Mr.インクレディブル」メドレー</strong> <span class="badge-3sheet">🏆3シート共通</span></td><td style="font-size: 12px">Winds Score<br>ニューサウンズ</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/GSsMUcIPwr4?si=x2-gpMq_gJYAEK4o" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">2</td><td><strong>「カルメン」組曲(A.リード改訂版)</strong></td><td style="font-size: 12px">Ludwig Masters Publications</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/1SNaN8GfFpY?si=lkQJgU1G2S2ZBEfu" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">3</td><td><strong>「崖の上のポニョ｣ファンタジー</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/3qCAIad1xuE?si=N2Sc7VEexqsb8J3Y" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">4</td><td><strong>Another day of sun</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">Winds Score</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/6_zNfNwg2NI?si=psbvQ5eRgs_tqr6R" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">5</td><td><strong>JBEST'23</strong></td><td style="font-size: 12px">windsscore</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/ixogON4Fyxc?si=pi782Rj4Hk30yK-S" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">6</td><td><strong>SpiritedAway</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Zoqvd5Pd9PI?si=Dr9lg5KDM1U54diw" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">7</td><td><strong>SUPER Mario brothers</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/OEP7GmhnW7w?si=gTtsuSbvG7CWjnAz" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">8</td><td><strong>アニメ・メドレー　久石嬢作品</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/lVi4tBxxXKs?si=WCzKmjsQtcfFsUCC" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">9</td><td><strong>アルヴァマー序曲</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/3xhdw-Q3xAQ?si=tWOTXlwtuQ7fjPHp" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">10</td><td><strong>ウィ・アー・オール・アローン</strong></td><td style="font-size: 12px">ニューサウンズ</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/FlTUj68nkds?si=ZvQn3AnYKrO1Bfpu" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">11</td><td><strong>エルカミーノレアル</strong></td><td style="font-size: 12px">M8等</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/HPYmrapNgxo?si=11f52qLcwToSVgMG" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">12</td><td><strong>エルクンバンチェロ</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Y1rR8v687iE?si=6SkHe9-1E3G8RI49" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">13</td><td><strong>オーメンズオブラブ</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">ブレーン</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/gJIOueoF6LQ?si=aEe-PvPdERb7M9PP" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">14</td><td><strong>おもちゃ箱のファンタジー(吹奏楽版)</strong></td><td style="font-size: 12px">ブレーン</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/I6Crkc2zpXA?si=HSLOQDLOV4kWxYrw" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">15</td><td><strong>オリエント急行</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">ブレーン</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/u4bqUFr2XNw?si=UyBlj0G2AOvUE56e" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">16</td><td><strong>カヴァレリア・ルスティカーナ</strong></td><td style="font-size: 12px">ブレーンミュージック</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Ykj9FAym9W0?si=hs9tQhZPGlu-4jNt" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">17</td><td><strong>カンタベリーコラール</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Z8NtHO3e9RU?si=lD1wxjoluoukvrt6" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">18</td><td><strong>さくらのうた</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">課題曲</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/ffTpPq5tL24?si=Fvq6G9Syu8w2_NAs" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">19</td><td><strong>ジブリシネマトリロジー1</strong></td><td style="font-size: 12px">ウィンズスコア</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/GK8OTk42U8o?si=5RldGl5hWM2EFi5m" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">20</td><td><strong>ジブリシネマトリロジー2</strong></td><td style="font-size: 12px"><br></td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/B0-sCqaBY3A?si=hNruBdA7uvJ4CZvI" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">21</td><td><strong>ジブリシネマトリロジー3</strong></td><td style="font-size: 12px"></td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/PBt7LIDLScs?si=ioREfJGztuhixlL9" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">22</td><td><strong>ジブリメドレー</strong></td><td style="font-size: 12px"></td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/TndEqzObcJw?si=K-Zw3_ZAlDk6q8nA" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">23</td><td><strong>スクーティン・オン・ハードロック</strong></td><td style="font-size: 12px">ミュージックエイト</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/P6BioH0bmuk?si=ZgmW_81C981YHGqr" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">24</td><td><strong>スペイン</strong></td><td style="font-size: 12px">ヤマハ</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/xwqd7nfEdlI?si=pLMXjnDLE_f8L_hE" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">25</td><td><strong>スペイン</strong></td><td style="font-size: 12px">Winds</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/b1R-60RLyuA?si=f1NRPJevBRkVkutQ" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">26</td><td><strong>たなばた</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/m1Xk9z7Ihoo?si=gzaMdoZ0AM1QgbD-" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">27</td><td><strong>ディープ・パープルメドレー</strong></td><td style="font-size: 12px">デ・ハスケ社</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://www.youtube.com/watch?v=tIQZE8HDe2g&amp;pp=ygUu44OH44Kj44O844OX44OR44O844OX44Or44Oh44OJ44Os44O8IOWQueWlj-alvQ%3D%3D" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">28</td><td><strong>ディスコキッド</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">全日本吹奏楽連盟</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/DPouuSwe5wA?si=AIkAbDeYFVV4BGp3" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">29</td><td><strong>ディズニー　ヴィランズ・メドレー</strong></td><td style="font-size: 12px">ニューサウンズ</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/iKwFITcij-Y?si=dEPy86yrrGYC4m6o" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">30</td><td><strong>ディズニー・プリンセスメドレー</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/c3bGm7I4QT0?si=MbGvyFBgzBC25Kd2" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">31</td><td><strong>ディズニーアットザムービー</strong></td><td style="font-size: 12px">windsscore</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/WRl3YZyO2Kk?si=2odDrsoNH4pfCZvH" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">32</td><td><strong>ネバーランドの冒険物語</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">フォスター</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/l6dfwdz-PV4?si=sf3uJULcr0HHxLcC" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">33</td><td><strong>バビロン川のほとりで</strong></td><td style="font-size: 12px">C.L.バーンハウス（ブレーンオンラインショップにて購入可能）</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://barnhouse.com/sample.php?action=listen&amp;sku=012-3033-00&amp;hash=9efeea1cdeb189ff3e4c5567026672c6f625be962853c21ef9b29fa1c5af734c" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">34</td><td><strong>バビロン川のほとりで</strong></td><td style="font-size: 12px">Winds score</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/rELqYXLfhOk?si=3-hunK2R5uEpHwSA" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">35</td><td><strong>プロヴァンスの風</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/ggJCJNdOx1s?si=w5zFxw8Fj0oHCEk5" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">36</td><td><strong>ポロネーズとアリア</strong></td><td style="font-size: 12px">クラシック or 吹奏楽曲 (マーチ含む)</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/qRIaoUvyzVU?si=CML-SMSEhHC49lxE" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">37</td><td><strong>マーチ・スカイブルー・ドリーム</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://www.youtube.com/watch?v=vwsxi44FTbo" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">38</td><td><strong>マーチ「ブルースカイ」</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/zg_y2gGJ-RI?si=wKHVuQhKpCFsrZdz" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">39</td><td><strong>マードックからの最後の手紙</strong></td><td style="font-size: 12px">フォスターミュージック</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/oU6TN5SuzxA" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">40</td><td><strong>マツケンサンバⅡ</strong></td><td style="font-size: 12px">東京ハッスルコピー</td><td style="text-align: center">⭕️</td><td style="text-align: center">
+              <a href="https://youtu.be/ChPgwIXR96U?si=fBISG2wcTJ_VCdbh" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">41</td><td><strong>メルヘン</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/U-j0lkaw4iU?si=BKhbxH3h6IMoB8sa" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">42</td><td><strong>もののけ姫セレクション</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">ブレーン等</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/NtPbVGGnNOg?si=9FfMOE16o3-TgChd" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">43</td><td><strong>ユーロビート・ディズニーメドレー</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/arh8GFWv_iY?si=m_EycUfxGyq55PS9" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">44</td><td><strong>ラッキードラゴン</strong></td><td style="font-size: 12px">ブレーン</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Acktto9xwtY?si=xuETpsdYZc_XjUk4" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">45</td><td><strong>ラプソディックエピソード</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/W9l1OX84E8A?si=U92Xfc5DrOuw3DrY" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">46</td><td><strong>リバーダンス</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">ロケットミュージック</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/vZ-GawRJLjE?si=mW43ygr0tzqMdMHJ" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">47</td><td><strong>レ・ミゼラブル</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Q3Q-zOKn_Wg?si=Z-u6M79DlOCGXJhg" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">48</td><td><strong>ワンス・モア・アントゥー・ザ・ブリーチ</strong></td><td style="font-size: 12px">ブレーン</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://m.youtube.com/watch%3Fv%3D6HC99fMvvGM&amp;ved=2ahUKEwiNxvGUnPGFAxUyrlYBHexiDZ8Qo7QBegQIChAF&amp;usg=AOvVaw1IdPAGpj8cTjaavGetIYhF" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">49</td><td><strong>海の男たちの歌</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/qm34cTU2aEk?si=PDN9v6QRd9GtQpJg" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">50</td><td><strong>銀河鉄道999</strong></td><td style="font-size: 12px">ミュージックエイト</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/XxrSa4HiJMY?si=cL4SKPEnjKYCeXcT" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">51</td><td><strong>交響組曲「君の名は。」</strong></td><td style="font-size: 12px">ウィンズスコア</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/Pyc9Z_X8zgQ?si=H3X70kYialQLiPFE" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">52</td><td><strong>士官候補生</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/mfDuPY_GoW4?si=6VCwZuehEfufHiAT" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">53</td><td><strong>私のお気に入り</strong></td><td style="font-size: 12px">ニューサウンズ</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/XRiN-2ZEg0w?si=7hsGG6RSFKhuASXy" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">54</td><td><strong>叙情的祭</strong></td><td style="font-size: 12px">吹奏楽出版社</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://www.youtube.com/watch?v=iADOVizG540&amp;pp=ygUW5Y-b5oOF55qE56WtIOWQueWlj-alvQ%3D%3D" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">55</td><td><strong>小さな世界〜ニューヨークワールドフェア〜</strong></td><td style="font-size: 12px">ウィンズスコア　(元の出版社は不明)</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/XoCb4w_KEn0?si=nkebkRVuDqGfXKm9" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">56</td><td><strong>神々の運命</strong></td><td style="font-size: 12px">C.L.バーンハウス</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://barnhouse.com/sample.php?action=listen&amp;sku=012-3165-00&amp;hash=df87397be53eeba020d4314bea67c7443fa2752a37aad2cb653a3bd9f14f169e" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">57</td><td><strong>吹奏楽のための民謡</strong></td><td style="font-size: 12px">Winds Score</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/6lW4pdvgVQo?si=QgURgINynQwyEAwP" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">58</td><td><strong>星の王子さま</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/fYnXqwgyweY?si=wTYyvKNRzU8TYtW-" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">59</td><td><strong>星条旗よ永遠なれ</strong> <span class="badge-2sheet">★2シート共通</span></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/pHbgtUahL4s?si=5a3dMxsygwipd-i6" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">60</td><td><strong>千と千尋の神隠しセレクション</strong></td><td style="font-size: 12px">teeda</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/xl8X43mqX3g?si=Gnoh3Qwbc0tIrZas" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">61</td><td><strong>想い麗し浄瑠璃姫の雫</strong></td><td style="font-size: 12px">フォスター</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/XlqnwLH3fEM?si=uIL2GPj0wkzHE1Xb" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">62</td><td><strong>天気の子メドレー(配られてるやつ)</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"></td><td style="text-align: center"></td></tr><tr><td style="text-align: center; color: #888">63</td><td><strong>天馬の道</strong></td><td style="font-size: 12px">2008年全日本吹奏楽コンクール課題曲</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/31Ya_1aEnFA?si=I-I2mNWwRJ3_W2nL" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">64</td><td><strong>美女と野獣</strong></td><td style="font-size: 12px">ブレーン等</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/F7xDajcQY-Y?si=TiocBOWPrq0doSth" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">65</td><td><strong>風になりたい　小編成</strong></td><td style="font-size: 12px">windsscore</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/2RdoDNo1e-g?si=243M3wbgwokWd05N" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">66</td><td><strong>宝島</strong> <span class="badge-3sheet">🏆3シート共通</span></td><td style="font-size: 12px">New sounds In brass</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/KXvJtxQNPGE?si=EzSTGvudRLKb2BUa" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">67</td><td><strong>魔女の宅急便セレクション
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 10px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 700;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: left;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">★2シート共通</span>
+
+</strong></td><td style="font-size: 12px">ブレーン</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/uoc3DEKa6Xc?si=NDilqWA4JCCRcZRB" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">68</td><td><strong>夢やぶれて</strong></td><td style="font-size: 12px">不明</td><td style="text-align: center"><br></td><td style="text-align: center">
+              <a href="https://youtu.be/6t004F8j694?si=5ZXZUwi8O35w_xbE" target="_blank" class="yt-btn">▶</a>
+            </td></tr><tr><td style="text-align: center; color: #888">69</td><td><strong>鷲の舞うところ</strong></td><td style="font-size: 12px">C.L.バーンハウス</td><td style="text-align: center">
+
+  <meta charset="UTF-8">
+
+
+  <span style="
+      caret-color: rgb(65, 84, 98);
+      color: rgb(65, 84, 98);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 11.375px;
+      font-style: normal;
+      font-variant-caps: normal;
+      font-weight: 400;
+      letter-spacing: normal;
+      orphans: 2;
+      text-align: center;
+      text-indent: 0px;
+      text-transform: none;
+      white-space: normal;
+      widows: 2;
+      word-spacing: 0px;
+      -webkit-text-stroke-width: 0px;
+      background-color: rgb(240, 244, 255);
+      text-decoration: none;
+      display: inline !important;
+      float: none;
+    ">⭕️</span>
+
+<br></td><td style="text-align: center">
+              <a href="https://youtu.be/sa879MGz_lA?si=3B7_z4wQT1RQOMIh" target="_blank" class="yt-btn">▶</a>
+            </td></tr></tbody></table>
+    </div>
+
+    <script>
+      function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach((el) => el.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach((el) => el.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        const btns = document.querySelectorAll('.tab-btn');
+        const ids = ['tab2027', 'tabTeien', 'tab2025'];
+        btns[ids.indexOf(tabId)].classList.add('active');
+      }
+    </script>
+  
+
+</body></html>
